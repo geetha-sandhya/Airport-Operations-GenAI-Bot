@@ -31,14 +31,20 @@ def is_airport_related(query):
 
 # ---------------- Response Logic ----------------
 if user_input:
+    try:
+        model = genai.GenerativeModel("gemini-pro")
 
-    if not is_airport_related(user_input):
-        st.error("❌ I can only answer airport-related queries.")
-    
-    else:
-        try:
-            model = genai.GenerativeModel("gemini-pro")
+        # Check if query is airport-related
+        if not is_airport_related(user_input):
+            st.warning("⚠️ This question is not related to airport operations, but I will still try to answer.")
 
+            prompt = f"""
+            Answer the following question clearly:
+
+            {user_input}
+            """
+
+        else:
             prompt = f"""
             You are an expert Airport Operations Assistant.
 
@@ -47,12 +53,13 @@ if user_input:
             Question: {user_input}
             """
 
-            response = model.generate_content(prompt)
+        # Generate response
+        response = model.generate_content(prompt)
 
-            if response and hasattr(response, "text"):
-                st.success(response.text)
-            else:
-                st.warning("⚠️ No response generated. Try again.")
+        if response and hasattr(response, "text"):
+            st.success(response.text)
+        else:
+            st.warning("⚠️ No response generated. Try again.")
 
-        except Exception as e:
-            st.error(f"❌ Error: {str(e)}")
+    except Exception as e:
+        st.error(f"❌ Error: {str(e)}")
