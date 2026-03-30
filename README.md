@@ -79,6 +79,14 @@ streamlit run airportbot.py
 The app will open at:http://localhost:8501
 
 ---
+## 🌐 Live Demo
+
+🚀 Experience the live chatbot:  
+👉 https://your-app-name.streamlit.app
+
+### 🔐 Note:
+- Enter your Gemini API key in the sidebar  
+- The app works in real-time using Generative AI  
 
 ## 🔐 Important Note
 - You need a **Google AI Studio API Key** to run this project  
