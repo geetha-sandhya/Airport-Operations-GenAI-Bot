@@ -82,7 +82,7 @@ The app will open at:http://localhost:8501
 ## 🌐 Live Demo
 
 🚀 Experience the live chatbot:  
-👉 https://your-app-name.streamlit.app
+👉 https://airport-operations-genai-bot-eb2dgmg3dqvtcakdvfm9ep.streamlit.app/
 
 ### 🔐 Note:
 - Enter your Gemini API key in the sidebar  
