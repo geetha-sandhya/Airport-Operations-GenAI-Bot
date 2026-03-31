@@ -1,5 +1,9 @@
 
 # ✈️ Airport Ground Operations Explainer Bot
+## 🌐 Live Demo
+
+🚀 Experience the live chatbot:  
+👉 https://airport-operations-genai-bot-eb2dgmg3dqvtcakdvfm9ep.streamlit.app/
 
 ## 📌 Project Overview
 This project is a Generative AI-based chatbot developed during a college hackathon conducted by V Cube Software Solutions.
@@ -79,10 +83,6 @@ streamlit run airportbot.py
 The app will open at:http://localhost:8501
 
 ---
-## 🌐 Live Demo
-
-🚀 Experience the live chatbot:  
-👉 https://airport-operations-genai-bot-eb2dgmg3dqvtcakdvfm9ep.streamlit.app/
 
 ### 🔐 Note:
 - Enter your Gemini API key in the sidebar  
